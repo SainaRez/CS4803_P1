@@ -11,28 +11,38 @@
 '''
 
 #--------------------------
-def bubblesort( A ):
+def bubblesort(A):
     ''' 
         Given a disordered list of integers, rearrange the integers in natural order using bubble sort algorithm.
         Input: A:  a list, such as  [2,6,1,4]
-        Output: a sorted list 
+        Output: a sorted list
     '''
     for i in range(len(A)):
         for k in range( len(A) - 1, i, -1):
             if ( A[k] < A[k - 1] ):
                 swap( A, k, k - 1 )
- 
+    print(A)
 #--------------------------
 def swap( A, i, j ):
     ''' 
-        Swap the i-th element and j-th element in list A.  
+        Swap the i-th element and j-th element in list A.
         Inputs: 
             A:  a list, such as  [2,6,1,4]
             i:  an index integer for list A, such as  3
             j:  an index integer for list A, such as  0
     '''
     #########################################
-    ## INSERT YOUR CODE HERE
+    for n in range(len(A)):
+        if A[n] == i:
+            A[n] = j
+        elif A[n] == j:
+            A[n] = i
+    print(A)
+
+A = [6,5,4,3,2,1]
+#swap(A, 1, 6)
+bubblesort(A)
+
 
 
 
